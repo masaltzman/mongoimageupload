@@ -1,7 +1,10 @@
-const multer = require("multer");
+// you must add the following lines to your routes.js
+
+const multer = require("multer"); // you must npm install multer
 const path = require("path");
 const fs = require("fs");
-const uploadsFolder = "uploads/"; // don't forget to create this folder inside your projec folder
+const uploadsFolder = "uploads/"; // don't forget to create this folder inside your project folder
+
 module.exports = function (app, db) {
     const multer = require('multer')
     const upload = multer({ dest: uploadsFolder })
