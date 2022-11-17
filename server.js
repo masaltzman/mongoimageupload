@@ -6,7 +6,9 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 let db;
-mongoose.connect("mongodb+srv://mark:mark@cluster0.cwmf5km.mongodb.net/images?retryWrites=true&w=majority", async (err, database) => {
+
+// put your mongo url in the connect below
+mongoose.connect("", async (err, database) => {
     if (err) return console.log(err)
     db = database
     require('./app/routes.js')(app, db)
